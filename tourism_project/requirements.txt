@@ -1,0 +1,17 @@
+# Core data handling
+pandas==2.2.2
+numpy==1.26.4
+
+# Machine Learning
+scikit-learn==1.6.0
+xgboost==2.1.4
+joblib==1.5.1
+
+# MLOps / Experiment Tracking
+mlflow==3.0.1
+
+# Hugging Face Hub (datasets, models, spaces)
+huggingface_hub==0.32.6
+
+# Optional (safe utility)
+python-dotenv==1.0.1
