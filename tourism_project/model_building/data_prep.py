@@ -18,7 +18,12 @@ def clean_data(df: pd.DataFrame, target_col: str = "ProdTaken") -> pd.DataFrame:
     # Drop ID-like columns
     if "CustomerID" in df_clean.columns:
         df_clean.drop(columns=["CustomerID"], inplace=True)
-
+    
+    # Drop accidental index column(s)
+    for col in ["Unnamed: 0", "Unnamed:0"]:
+        if col in df_clean.columns:
+            df_clean.drop(columns=[col], inplace=True)
+    
     # Drop duplicates
     df_clean = df_clean.drop_duplicates()
 
